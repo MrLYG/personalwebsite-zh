@@ -1,0 +1,206 @@
+<style>
+    .projects-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 0;
+    }
+
+    .projects-table td {
+        border: 0;
+        vertical-align: middle;
+    }
+
+    .projects-table img {
+        max-width: 100px;
+        height: 100px;
+    }
+
+    .projects-table .paper p {
+        text-align: left;
+        margin: 0;
+    }
+
+    #techstack {
+        font-size: 0.9em;
+    }
+
+    .projects-table .paper {
+        position: relative;
+        /* 设置为相对定位，以便背景图片正确放置 */
+    }
+
+    .project-entry {
+        position: relative;
+        /* 使我们能够相对于此容器定位背景图片 */
+        margin-bottom: 20px;
+        /* 可选：根据需要增加一些间距 */
+    }
+
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+        /* 根据需要调整透明度 */
+    }
+    hr {
+        border: 0;
+        height: 1px;
+        opacity: 0.3;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+
+    .background-image {
+        /* 其他样式保持不变 */
+        background-size: contain;
+        /* 确保图片完整显示 */
+        background-repeat: no-repeat;
+        /* 防止图片重复 */
+        background-position: center;
+        /* 将图片居中在容器内 */
+        opacity: 0.075;
+        /* 根据需要调整透明度 */
+    }
+</style>
+<div class="project-entry" id="ablator">
+    <div class="background-image" style="background-image: url('/img/ablator.png');"></div>
+    <table class="projects-table" style="width:100%; border-collapse: collapse;">
+        <tr>
+            <td class="paper">
+                <papertitle><b>ABLATOR: 用于机器学习消融研究的分布式执行框架</b></papertitle>
+                <p id="techstack"><i>Python, MLOps, Docker, Github Action, Pytorch, Pytest</i></p>
+                <em>AutoML</em>,2023
+                <br>
+                <a href="https://github.com/fostiropoulos/ablator" style="color:blue;">Github</a>
+                /
+                <a href="https://openreview.net/pdf?id=eBLV3i7PG1c" style="color:blue;">论文</a>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="paper" colspan="2">
+                <p>
+                    <li>为消融研究提供的分布式实验执行框架。ABLATOR为您的模型提供了一个包装器，还提供了一个Trainer类，让您可以在自己的方法上进行原型设计，并通过一次代码更改扩展到数千个实验试验。</li>
+                    <li>自动化分析工件，减少手动审查流程。</li>
+                    <li>集成全面的功能（HPO、训练、调优、分析），超越Ray、Optuna等现有框架。</li>
+                    <li>与成熟库（例如，PyTorch Lighting）集成，确保无需复杂性即可实现多功能。</li>
+                    <li>减少开发MLOps负担，将重点转移到Machine Learning研究的创新方面。</li>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+<hr>
+<div class="project-entry">
+    <div class="background-image" style="background-image: url('/img/rocketmq.png');"></div>
+    <table class="projects-table" style="width:100%; border-collapse: collapse;">
+        <tr>
+            <td class="paper">
+                <papertitle><b>RocketMqOperator：在云平台上自动管理RocketMq集群实例</b></papertitle>
+                <p id="techstack"><i><b>Kubernetes, Docker</b>, Go, CI/CD, CRD, Operator-SDK, Helm3, Prometheus, Grafana</i></p>
+                <em>商汤科技</em>, 2023
+                <br>
+                <a href="https://youtu.be/ZPjd3liwSkE" style="color:blue;">视频介绍</a>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="paper" colspan="2">
+                <p>
+                    RocketMQ Operator自动在基于Kubernetes的云环境中部署和管理RocketMQ集群。
+                    <i>Apache RocketMQ是一个受欢迎的分布式消息和流平台。</i>
+                    <br>支持特性：
+                    <li>水平缩放 - 安全且无缝地扩展RocketMQ的每个组件。</li>
+                    <li>滚动更新 - 有序地进行滚动更新，无需停机时间。</li>
+                    <li>多集群支持 - 用户可以使用RocketMQ Operator在单个Kubernetes集群上部署和管理多个RocketMQ名称服务器集群和代理集群。</li>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+<hr>
+<div class="project-entry">
+    <div class="background-image" style="background-image: url('/img/webrr.png');"></div>
+    <table class="projects-table" style="width:100%; border-collapse: collapse;">
+        <tr>
+            <td class="paper">
+                <papertitle><b>WebRR：基于记录/重放的Web应用自动测试工具</b></papertitle>
+                <p id="techstack"><i>Docker, Node.js, JSON, Vue.js, RobotFramework</i></p>
+                <em>中国科学院软件研究所</em>, 2021-2022
+                <br><a href="https://dl.acm.org/doi/abs/10.1145/3368089.3417069" style="color:blue;">论文</a>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="paper" colspan="2">
+                <p>
+                    <li>该工具采用低代码方法，允许没有广泛编程技能的用户轻松创建和部署复杂的自动化测试。</li>
+                    <li>采用低代码模型，简化了有限编程背景用户的测试创建。</li>
+                    <li>确保了<b>跨平台测试</b>，增强了在不同环境中的应用程序一致性。</li>
+                    <li>自动从用户交互操作到JSON，然后到Robot Framework格式的脚本生成。</li>
+                    <li>在南方电网等关键企业中部署，自动化了他们的回归测试流程，减少了错误。</li>
+                    <li>由于工具的易用性，扩大了测试参与度，提高了软件质量和用户满意度。</li>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+<hr>
+<div class="project-entry">
+    <div class="background-image" style="background-image: url('/img/collegeanalysiss.png');"></div>
+    <table class="projects-table" style="width:100%; border-collapse: collapse;">
+        <tr>
+            <td class="paper">
+                <papertitle><b>大学生专业发展分析平台</b></papertitle>
+                <p id="techstack"><i>FullStack, Python, JavaScript, Web Scraping, MySQL, MongoDB, Docker, Spring, React, CI/CD</i></p>
+                <em>国家级创新项目</em>,2021
+                <br>
+                <a href="https://github.com/YuGroup/college-major-analysis" style="color:blue;">Github</a>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="paper" colspan="2">
+                <p>
+                    <li>领导团队使用网络爬虫和Python库收集和分析工作招聘数据，帮助大学专业和课程规划。</li>
+                    <li>使用MongoDB和MySQL数据库存储数据，用于后续的数据处理和分析。</li>
+                    <li>使用Spring和React技术构建数据可视化界面，提高数据的可读性。</li>
+                    <li>使用Docker进行容器化，使用CI/CD技术进行自动化操作，提高项目部署和运行的效率，确保项目的稳定性和可靠性。</li>
+                    <li>获得“大学生国家级创新优秀项目”的认可，并被学校采用作为专业发展数据支持。</li>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+<hr>
+<div class="project-entry">
+    <div class="background-image" style="background-image: url('/img/eventmaster.png');"></div>
+    <table class="projects-table" style="width:100%; border-collapse: collapse;">
+        <tr>
+            <td class="paper">
+                <papertitle><b>EventMaster</b></papertitle>
+                <p id="techstack"><i>FullStack, JavaScript, Node.js, Express, AngularJS, TypeScript, Bootstrap, RESTful API, Google Cloud Platform</i></p>
+                <em>个人项目</em>,2022
+                <br>
+                <a href="https://eventmaster.xyz" style="color:blue;">网站</a>
+                /
+                <a href="https://github.com/zkzhao333/eventmaster" style="color:blue;">Github</a>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="paper" colspan="2">
+                <p>
+                    <li>使用JavaScript/Node.js、Express、AngularJS、TypeScript和Bootstrap开发了一个全栈事件搜索平台，汇总事件信息并增强用户互动。</li>
+                    <li>集成了Ticketmaster、Spotify、Google Maps和社交媒体等API，丰富了前端的数据显示。</li>
+                    <li>项目部署在Google Cloud Platform（App Engine）上，并进行了性能优化。</li>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
