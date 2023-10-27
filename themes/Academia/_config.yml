@@ -12,10 +12,11 @@ since: 2023
 # 可以选择外链或其他页面
 menu:
   Readme: /Readme/
-  Experience: /Experience/
-  Projects: /Projects/
+  经历: /Experience/
+  项目: /Projects/
+  教育: /Education/
   English(en-us): http://www.yuangang.tech
-  Education: /Education/
+
   # Test: /test/
 
 # flink picture will load if avator link calls on error
